@@ -8,7 +8,7 @@ namespace automat
 {
     internal class Product
     {
-
+//Hvorfor ligger der en liste inde i produktet?
         public Stack<ProductData> stack = new Stack<ProductData>();
 
         public Stack<ProductData> Stack
@@ -22,6 +22,7 @@ namespace automat
         }
     }
 
+    //Forkert navngivning
     internal class ProductData
     {
         private string name;

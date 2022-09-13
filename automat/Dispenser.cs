@@ -8,6 +8,7 @@ namespace automat
 {
     internal class Dispenser
     {
+        //Uha ... det mås man ikke. Her lader du dit logiklag vide noget om UI og det er forbudt :)
         Program program = new Program();
         Product[,] products = new Product[2, 5];
 
@@ -28,6 +29,7 @@ namespace automat
         }
 
         public Product[,]? Products { get => products; }
+        //Hvorfor bruger du spørgsmålstegn her?
         private static Dispenser? instance = null;
         public static Dispenser Instance 
         { 
@@ -52,6 +54,7 @@ namespace automat
 
         public void ChangeProduct(int[] pos)
         {
+            //Du blander UI og logik igen
             Console.Clear();
             program.PrintString("whats the name of the product");
             string name = program.GetAnswer();
@@ -61,6 +64,7 @@ namespace automat
             AdminRefill(pos);
         }
 
+        //Kunden får jo aldrig et objekt og du fjerner ikke produktet fra maskinen
         public void BuySomething(int[] pos)
         {
             if(coinBuffer >= products[pos[0], pos[1]].Stack.Peek().Price)
